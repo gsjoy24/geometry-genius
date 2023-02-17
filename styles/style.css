@@ -1,0 +1,8 @@
+*{
+   transition: 250ms;
+}
+input::placeholder{
+color: #333;
+}
+
+/* &#10005; */

@@ -14,6 +14,150 @@
 		<link rel="stylesheet" href="styles/style.css" />
 	</head>
 	<body>
+		<header class="m-0 lg:m-8 md:m-4">
+			<div class="navbar bg-blue-100 p-5 rounded-lg">
+				<div class="flex-1">
+					<a class="normal-case text-xl">
+						<span class="text-3xl font-bold block text-slate-700">Interactive</span>
+						<span class="text-xl font-bold text-slate-600">Geometry Genius</span>
+					</a>
+				</div>
+				<div class="flex-none">
+					<button class="btn btn-info px-7 text-white font-bold hover:bg-blue-600 duration-200">Blog</button>
+				</div>
+			</div>
+		</header>
+
+		<main class="px-8">
+			<section>
+				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+					<div class="col-span-2">
+						<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
+							<!-- ! Triangle -->
+							<div id="card" class="card w-full bg-base-100 shadow-xl text-center p-5">
+								<figure><img class="h-[160px] p-3" src="/images/triangle.png" alt="triangle" /></figure>
+								<div>
+									<h2 class="text-2xl font-semibold text-center">Triangle</h2>
+									<p class="text-sm py-2">Area (A) = 0.5 &#10005; b &#10005; h</p>
+									<div class="mt-3">
+										<input class="bg-slate-200 px-2 w-12 rounded-md" type="text" placeholder="b" /> cm
+										<input class="bg-slate-200 px-2 w-12 ml-2 rounded-md" type="text" placeholder="h" /> cm
+									</div>
+
+									<button
+										id="btn-calcutalte"
+										class="text-white p-2 rounded-lg font-semibold bg-blue-600 hover:bg-blue-800 w-[85%] mt-10"
+									>
+										Calculate
+									</button>
+								</div>
+							</div>
+
+							<!-- ! Rectangle -->
+							<div id="card" class="card w-full bg-base-100 shadow-xl text-center p-5">
+								<figure><img class="h-[160px] p-3" src="/images/rectangle.png" alt="Rectangle" /></figure>
+								<div>
+									<h2 class="text-2xl font-semibold text-center">Rectangle</h2>
+									<p class="text-sm py-2">Area (A) = w &#10005; I</p>
+									<div class="mt-3">
+										<input class="bg-slate-200 px-2 w-12 rounded-md" type="text" placeholder="b" /> cm
+										<input class="bg-slate-200 px-2 w-12 ml-2 rounded-md" type="text" placeholder="h" /> cm
+									</div>
+
+									<button
+										id="btn-calcutalte"
+										class="text-white p-2 rounded-lg font-semibold bg-blue-600 hover:bg-blue-800 w-[85%] mt-10"
+									>
+										Calculate
+									</button>
+								</div>
+							</div>
+
+							<!-- ! Parallelogram -->
+							<div id="card" class="card w-full bg-base-100 shadow-xl text-center p-5">
+								<figure><img class="h-[160px] p-3" src="/images/parallelogram.png" alt="Parallelogram" /></figure>
+								<div>
+									<h2 class="text-2xl font-semibold text-center">Parallelogram</h2>
+									<p class="text-sm py-2">Area (A) = b &#10005; h</p>
+									<div class="mt-3">
+										<input class="bg-slate-200 px-2 w-12 rounded-md" type="text" placeholder="b" /> cm
+										<input class="bg-slate-200 px-2 w-12 ml-2 rounded-md" type="text" placeholder="h" /> cm
+									</div>
+
+									<button
+										id="btn-calcutalte"
+										class="text-white p-2 rounded-lg font-semibold bg-blue-600 hover:bg-blue-800 w-[85%] mt-10"
+									>
+										Calculate
+									</button>
+								</div>
+							</div>
+
+							<!-- ! Rhombus -->
+							<div id="card" class="card w-full bg-base-100 shadow-xl text-center p-5">
+								<figure><img class="h-[160px] p-3" src="/images/rhombus.png" alt="Rhombus" /></figure>
+								<div>
+									<h2 class="text-2xl font-semibold text-center">Rhombus</h2>
+									<p class="text-sm py-2">Area (A) = 0.5 &#10005; d<sub>1</sub> &#10005; d<sub>2</sub></p>
+									<div class="mt-3">
+										<input class="bg-slate-200 px-2 w-12 rounded-md" type="text" placeholder="d1" /> cm
+										<input class="bg-slate-200 px-2 w-12 ml-2 rounded-md" type="text" placeholder="d2" /> cm
+									</div>
+
+									<button
+										id="btn-calcutalte"
+										class="text-white p-2 rounded-lg font-semibold bg-blue-600 hover:bg-blue-800 w-[85%] mt-10"
+									>
+										Calculate
+									</button>
+								</div>
+							</div>
+
+							<!-- ! Pentagon -->
+							<div id="card" class="card w-full bg-base-100 shadow-xl text-center p-5">
+								<figure><img class="h-[160px] p-3" src="/images/pentagon.png" alt="Pentagon" /></figure>
+								<div>
+									<h2 class="text-2xl font-semibold text-center">Pentagon</h2>
+									<p class="text-sm py-2">Area (A) = 0.5 &#10005; p &#10005; b</p>
+									<div class="mt-3">
+										<input class="bg-slate-200 px-2 w-12 rounded-md" type="text" placeholder="b" /> cm
+										<input class="bg-slate-200 px-2 w-12 ml-2 rounded-md" type="text" placeholder="h" /> cm
+									</div>
+
+									<button
+										id="btn-calcutalte"
+										class="text-white p-2 rounded-lg font-semibold bg-blue-600 hover:bg-blue-800 w-[85%] mt-10"
+									>
+										Calculate
+									</button>
+								</div>
+							</div>
+
+							<!-- ! Ellipse -->
+							<div id="card" class="card w-full bg-base-100 shadow-xl text-center p-5">
+								<figure><img class="h-[160px] p-3" src="/images/ellipse.png" alt="Ellipse" /></figure>
+								<div>
+									<h2 class="text-2xl font-semibold text-center">Ellipse</h2>
+									<p class="text-sm py-2">Area (A) = &pi;ab</p>
+									<div class="mt-3">
+										<input class="bg-slate-200 px-2 w-12 rounded-md" type="text" placeholder="b" /> cm
+										<input class="bg-slate-200 px-2 w-12 ml-2 rounded-md" type="text" placeholder="h" /> cm
+									</div>
+
+									<button
+										id="btn-calcutalte"
+										class="text-white p-2 rounded-lg font-semibold bg-blue-600 hover:bg-blue-800 w-[85%] mt-10"
+									>
+										Calculate
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+			</section>
+		</main>
 		<!-- * custom javascript -->
 		<script src="scripts/app.js"></script>
 	</body>
