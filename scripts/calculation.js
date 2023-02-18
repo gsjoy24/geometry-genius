@@ -50,12 +50,14 @@ document.getElementById('btn-ellipse').addEventListener('click', function (e) {
 // data setting in the table
 function setData(nameOfShape, area) {
 	if (isNaN(area)) {
-		alert('please recheck the input fields.');
+		alert('please recheck the input fields and provide valid info.');
+	} else if (area < 0) {
+		alert('please provide positive numbers.');
 	} else {
 		const dataContainer = document.getElementById('table-body');
 		const tr = document.createElement('tr');
 		tr.innerHTML = `
-		<td class="font-semibold">${serial}</td>
+		<td class="font-semibold">${serial}.</td>
 		<td>${nameOfShape}</td>
 		<td>${area} cm<sup>2</sup></td>
 		<td>
