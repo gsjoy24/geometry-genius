@@ -23,18 +23,21 @@
 					</a>
 				</div>
 				<div class="flex-none">
-					<button class="btn btn-info px-7 text-white font-bold hover:bg-blue-600 duration-200">Blog</button>
+					<a href="blog.html">
+						<button class="btn btn-info px-7 text-white font-bold hover:bg-blue-600 duration-200">Blog</button>
+					</a>
 				</div>
 			</div>
 		</header>
 
 		<main class="px-8">
-			<section>
-				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-8">
+			<section class="mb-5">
+				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-8">
+					<!-- ! calculation cards -->
 					<div class="col-span-2">
 						<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
 							<!-- ! Triangle -->
-							<div id="card" class="card w-full bg-base-100 shadow-xl text-center p-5">
+							<div id="card-1" class="card w-full bg-base-100 shadow-xl text-center p-5">
 								<figure><img class="h-[160px] p-3" src="/images/triangle.png" alt="triangle" /></figure>
 								<div>
 									<h2 class="text-2xl font-semibold text-center">Triangle</h2>
@@ -45,7 +48,7 @@
 									</div>
 
 									<button
-										id="btn-calcutalte"
+										id="btn-triangle"
 										class="text-white p-2 rounded-lg font-semibold bg-blue-600 hover:bg-blue-800 w-[85%] mt-10"
 									>
 										Calculate
@@ -54,7 +57,7 @@
 							</div>
 
 							<!-- ! Rectangle -->
-							<div id="card" class="card w-full bg-base-100 shadow-xl text-center p-5">
+							<div id="card-2" class="card w-full bg-base-100 shadow-xl text-center p-5">
 								<figure><img class="h-[160px] p-3" src="/images/rectangle.png" alt="Rectangle" /></figure>
 								<div>
 									<h2 class="text-2xl font-semibold text-center">Rectangle</h2>
@@ -65,7 +68,7 @@
 									</div>
 
 									<button
-										id="btn-calcutalte"
+										id="btn-rectangle"
 										class="text-white p-2 rounded-lg font-semibold bg-blue-600 hover:bg-blue-800 w-[85%] mt-10"
 									>
 										Calculate
@@ -74,7 +77,7 @@
 							</div>
 
 							<!-- ! Parallelogram -->
-							<div id="card" class="card w-full bg-base-100 shadow-xl text-center p-5">
+							<div id="card-3" class="card w-full bg-base-100 shadow-xl text-center p-5">
 								<figure><img class="h-[160px] p-3" src="/images/parallelogram.png" alt="Parallelogram" /></figure>
 								<div>
 									<h2 class="text-2xl font-semibold text-center">Parallelogram</h2>
@@ -85,7 +88,7 @@
 									</div>
 
 									<button
-										id="btn-calcutalte"
+										id="btn-parallelogram"
 										class="text-white p-2 rounded-lg font-semibold bg-blue-600 hover:bg-blue-800 w-[85%] mt-10"
 									>
 										Calculate
@@ -94,7 +97,7 @@
 							</div>
 
 							<!-- ! Rhombus -->
-							<div id="card" class="card w-full bg-base-100 shadow-xl text-center p-5">
+							<div id="card-4" class="card w-full bg-base-100 shadow-xl text-center p-5">
 								<figure><img class="h-[160px] p-3" src="/images/rhombus.png" alt="Rhombus" /></figure>
 								<div>
 									<h2 class="text-2xl font-semibold text-center">Rhombus</h2>
@@ -105,7 +108,7 @@
 									</div>
 
 									<button
-										id="btn-calcutalte"
+										id="btn-rhombus"
 										class="text-white p-2 rounded-lg font-semibold bg-blue-600 hover:bg-blue-800 w-[85%] mt-10"
 									>
 										Calculate
@@ -114,7 +117,7 @@
 							</div>
 
 							<!-- ! Pentagon -->
-							<div id="card" class="card w-full bg-base-100 shadow-xl text-center p-5">
+							<div id="card-5" class="card w-full bg-base-100 shadow-xl text-center p-5">
 								<figure><img class="h-[160px] p-3" src="/images/pentagon.png" alt="Pentagon" /></figure>
 								<div>
 									<h2 class="text-2xl font-semibold text-center">Pentagon</h2>
@@ -125,7 +128,7 @@
 									</div>
 
 									<button
-										id="btn-calcutalte"
+										id="btn-pentagon"
 										class="text-white p-2 rounded-lg font-semibold bg-blue-600 hover:bg-blue-800 w-[85%] mt-10"
 									>
 										Calculate
@@ -134,7 +137,7 @@
 							</div>
 
 							<!-- ! Ellipse -->
-							<div id="card" class="card w-full bg-base-100 shadow-xl text-center p-5">
+							<div id="card-6" class="card w-full bg-base-100 shadow-xl text-center p-5">
 								<figure><img class="h-[160px] p-3" src="/images/ellipse.png" alt="Ellipse" /></figure>
 								<div>
 									<h2 class="text-2xl font-semibold text-center">Ellipse</h2>
@@ -145,7 +148,7 @@
 									</div>
 
 									<button
-										id="btn-calcutalte"
+										id="btn-ellipse"
 										class="text-white p-2 rounded-lg font-semibold bg-blue-600 hover:bg-blue-800 w-[85%] mt-10"
 									>
 										Calculate
@@ -154,28 +157,33 @@
 							</div>
 						</div>
 					</div>
-					<div class="mx-auto">
+					<!-- ! end calculation cards -->
+
+					<!-- ! result table -->
+					<div class="border-2 rounded-lg border-gray-500">
 						<h2 class="text-2xl underline font-bold text-center">Area Calculation</h2>
 						<div class="overflow-x-auto">
 							<table class="table w-full">
-								<tbody>
-									<!-- row 1 -->
+								<tbody id="table-body">
+									<!-- row 1
 									<tr>
-										<th>1</th>
+										<td class="font-semibold">1</td>
 										<td>Triangle</td>
 										<td>12 cm<sup>2</sup></td>
 										<td>
 											<button class="text-xs bg-blue-600 text-white p-2 rounded">Covert to m<sup>2</sup></button>
 										</td>
-									</tr>
+									</tr> -->
 								</tbody>
 							</table>
 						</div>
 					</div>
+					<!-- ! end result table -->
 				</div>
 			</section>
 		</main>
-		<!-- * custom javascript -->
-		<script src="scripts/app.js"></script>
+		<!-- * custom javascript files -->
+		<script src="scripts/bgChange.js"></script>
+		<script src="scripts/calculation.js"></script>
 	</body>
 </html>
