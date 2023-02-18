@@ -16,12 +16,12 @@ function getSecondNum(id) {
 function calculation1(id) {
 	document.getElementById(id).addEventListener('click', function (e) {
 		const nameOfShape = e.target.parentNode.children[0].innerText;
-		// const num1 = parseFloat(getFirstNum(id));
+
 		const num1 = getFirstNum(id);
 		const num2 = getSecondNum(id);
 		const area = (0.5 * num1 * num2).toFixed(2);
 
-		setData(nameOfShape, area);
+		setData(nameOfShape, area, id);
 	});
 }
 // for Rectangle and Parallelogram
@@ -32,7 +32,7 @@ function calculation2(id) {
 		const num2 = getSecondNum(id);
 		const area = (num1 * num2).toFixed(2);
 
-		setData(nameOfShape, area);
+		setData(nameOfShape, area, id);
 	});
 }
 // for Ellipse
@@ -42,13 +42,16 @@ document.getElementById('btn-ellipse').addEventListener('click', function (e) {
 	const num2 = getSecondNum('btn-ellipse');
 	const area = (3.14 * num1 * num2).toFixed(2);
 
-	setData(nameOfShape, area);
+	setData(nameOfShape, area, 'btn-ellipse');
 });
 
 // data setting in the table
 
 let serial = 0;
-function setData(nameOfShape, area) {
+function setData(nameOfShape, area, id) {
+	document.getElementById(id).parentNode.children[2].children[0].value = '';
+	document.getElementById(id).parentNode.children[2].children[1].value = '';
+
 	if (isNaN(area)) {
 		alert('please recheck the input fields and provide valid numbers.');
 	} else if (area < 0) {
