@@ -48,6 +48,7 @@ document.getElementById('btn-ellipse').addEventListener('click', function (e) {
 // data setting in the table
 
 let serial = 0;
+
 function setData(nameOfShape, area, id) {
 	document.getElementById(id).parentNode.children[2].children[0].value = '';
 	document.getElementById(id).parentNode.children[2].children[1].value = '';
@@ -65,7 +66,7 @@ function setData(nameOfShape, area, id) {
 		<td>${nameOfShape}</td>
 		<td>${area} cm<sup>2</sup></td>
 		<td>
-			<button class="text-xs bg-blue-600 text-white p-2 rounded">Covert to m<sup>2</sup></button>
+			<button class="text-xs bg-blue-500 hover:bg-blue-700 text-white p-2 rounded">Covert to m<sup>2</sup></button>
 		</td>
 	`;
 		dataContainer.appendChild(tr);
