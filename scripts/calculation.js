@@ -19,7 +19,10 @@ function calculation1(id) {
 
 		const num1 = getFirstNum(id);
 		const num2 = getSecondNum(id);
-		const area = (0.5 * num1 * num2).toFixed(2);
+		let area = 0.5 * num1 * num2;
+		if (!Number.isInteger(area)) {
+			area = area.toFixed(2);
+		}
 
 		setData(nameOfShape, area, id);
 	});
@@ -30,7 +33,10 @@ function calculation2(id) {
 		const nameOfShape = e.target.parentNode.children[0].innerText;
 		const num1 = getFirstNum(id);
 		const num2 = getSecondNum(id);
-		const area = (num1 * num2).toFixed(2);
+		let area = num1 * num2;
+		if (!Number.isInteger(area)) {
+			area = area.toFixed(2);
+		}
 
 		setData(nameOfShape, area, id);
 	});
@@ -40,7 +46,10 @@ document.getElementById('btn-ellipse').addEventListener('click', function (e) {
 	const nameOfShape = e.target.parentNode.children[0].innerText;
 	const num1 = getFirstNum('btn-ellipse');
 	const num2 = getSecondNum('btn-ellipse');
-	const area = (3.14 * num1 * num2).toFixed(2);
+	let area = 3.14 * num1 * num2;
+	if (!Number.isInteger(area)) {
+		area = area.toFixed(2);
+	}
 
 	setData(nameOfShape, area, 'btn-ellipse');
 });
