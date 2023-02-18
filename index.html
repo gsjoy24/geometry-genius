@@ -11,7 +11,14 @@
 		<!-- * tailwind cdn link -->
 		<script src="https://cdn.tailwindcss.com"></script>
 		<!-- * custom styles -->
-		<link rel="stylesheet" href="styles/style.css" />
+		<style>
+			* {
+				transition: 250ms;
+			}
+			input::placeholder {
+				color: #333;
+			}
+		</style>
 	</head>
 	<body>
 		<header class="m-0 lg:m-8 md:m-4">
@@ -164,17 +171,7 @@
 						<h2 class="text-2xl underline font-bold text-center">Area Calculation</h2>
 						<div class="overflow-x-auto">
 							<table class="table w-full">
-								<tbody id="table-body">
-									<!-- row 1
-									<tr>
-										<td class="font-semibold">1</td>
-										<td>Triangle</td>
-										<td>12 cm<sup>2</sup></td>
-										<td>
-											<button class="text-xs bg-blue-600 text-white p-2 rounded">Covert to m<sup>2</sup></button>
-										</td>
-									</tr> -->
-								</tbody>
+								<tbody id="table-body"></tbody>
 							</table>
 						</div>
 					</div>

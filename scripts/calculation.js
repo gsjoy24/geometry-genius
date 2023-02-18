@@ -11,11 +11,10 @@ function getSecondNum(id) {
 	const secondInput = parseFloat(secondInputStr);
 	return secondInput;
 }
-let serial = 0;
+
 // for Triangle, Rhombus and Pentagon
 function calculation1(id) {
 	document.getElementById(id).addEventListener('click', function (e) {
-		serial += 1;
 		const nameOfShape = e.target.parentNode.children[0].innerText;
 		// const num1 = parseFloat(getFirstNum(id));
 		const num1 = getFirstNum(id);
@@ -28,7 +27,6 @@ function calculation1(id) {
 // for Rectangle and Parallelogram
 function calculation2(id) {
 	document.getElementById(id).addEventListener('click', function (e) {
-		serial += 1;
 		const nameOfShape = e.target.parentNode.children[0].innerText;
 		const num1 = getFirstNum(id);
 		const num2 = getSecondNum(id);
@@ -39,21 +37,24 @@ function calculation2(id) {
 }
 // for Ellipse
 document.getElementById('btn-ellipse').addEventListener('click', function (e) {
-	serial += 1;
 	const nameOfShape = e.target.parentNode.children[0].innerText;
 	const num1 = getFirstNum('btn-ellipse');
 	const num2 = getSecondNum('btn-ellipse');
-	const area = (3.14159265359 * num1 * num2).toFixed(2);
+	const area = (3.14 * num1 * num2).toFixed(2);
+
 	setData(nameOfShape, area);
 });
 
 // data setting in the table
+
+let serial = 0;
 function setData(nameOfShape, area) {
 	if (isNaN(area)) {
-		alert('please recheck the input fields and provide valid info.');
+		alert('please recheck the input fields and provide valid numbers.');
 	} else if (area < 0) {
 		alert('please provide positive numbers.');
 	} else {
+		serial += 1;
 		const dataContainer = document.getElementById('table-body');
 		const tr = document.createElement('tr');
 		tr.innerHTML = `
@@ -71,5 +72,6 @@ function setData(nameOfShape, area) {
 calculation1('btn-triangle');
 calculation1('btn-rhombus');
 calculation1('btn-pentagon');
+
 calculation2('btn-rectangle');
 calculation2('btn-parallelogram');
